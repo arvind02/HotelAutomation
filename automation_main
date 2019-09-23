@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require_relative './lib/automation_controller.rb'
+
+controller = AutomationController.new(2, 1, 2)
+puts " "
+puts "Status - Current"
+puts controller.status
+puts " "
+#Optional to check power consumption of Hotel
+#puts controller.power_consumption 
+
+puts "\n\n\n"
+puts controller.movement(1, 2, true) #(floor, sub corridor, movement?)
+puts "Status - Movement in Floor 1 and Subcorridor 2"
+puts controller.status
+puts " "
+#Optional to check power consumption of Hotel
+#puts controller.power_consumption 
+
+puts "\n\n\n"
+puts controller.movement(1, 2, false) #(floor, sub corridor, movement?)
+puts "Status- No Movement in Floor 1 and Subcorridor 2 for a minute"
+puts controller.status
+puts " "
+#Optional to check power consumption of Hotel
+#puts controller.power_consumption 
