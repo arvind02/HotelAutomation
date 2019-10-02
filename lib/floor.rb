@@ -49,9 +49,9 @@ class Floor
 			total_pc += mc.power_consumption
 		end
 
-	  @sub_corridor.each do |sc|
+		@sub_corridor.each do |sc|
 			total_pc += sc.power_consumption
-	  end
+		end
 	  return total_pc
 	end
 
